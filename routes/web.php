@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::middleware([
     'auth:sanctum',
@@ -15,5 +15,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-
+Route::get('/', [\App\Http\Controllers\PageDisplayController::class, 'home'])->name('frontend.home');
 Route::get('{slug}', [\App\Http\Controllers\PageDisplayController::class, 'show'])->name('frontend.page');

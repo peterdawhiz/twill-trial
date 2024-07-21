@@ -7,6 +7,7 @@
     "require": {
         "php": "^8.2",
         "area17/twill": "^3.3",
+        "barryvdh/laravel-debugbar": "^3.13",
         "laravel/framework": "^11.9",
         "laravel/jetstream": "^5.1",
         "laravel/sanctum": "^4.0",
