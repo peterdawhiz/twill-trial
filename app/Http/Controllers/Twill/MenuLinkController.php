@@ -33,9 +33,6 @@ class MenuLinkController extends BaseModuleController
     {
         $form = parent::getForm($model);
 
-        // $form->add(
-        //     Input::make()->name('description')->label('Description')->translatable()
-        // );
         $form->add(Browser::make()->name('page')->modules([Page::class]));
 
         return $form;
@@ -47,11 +44,6 @@ class MenuLinkController extends BaseModuleController
     protected function additionalIndexTableColumns(): TableColumns
     {
         $table = parent::additionalIndexTableColumns();
-
-        // $table->add(
-        //     Text::make()->field('description')->title('Description')
-        // );
-
         return $table;
     }
 }
